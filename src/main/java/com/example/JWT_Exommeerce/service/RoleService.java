@@ -1,0 +1,16 @@
+package com.example.JWT_Exommeerce.service;
+
+import com.example.JWT_Exommeerce.dao.RoleDao;
+import com.example.JWT_Exommeerce.entity.Role;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class RoleService {
+    @Autowired
+    private RoleDao roleDao;
+
+     public Role createNewRole(Role role) {
+        return roleDao.save(role);
+     }
+}
